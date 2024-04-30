@@ -23,7 +23,6 @@ async function getPrevisao() {
 
     try {
         document.getElementById('resposta2').innerHTML = texto;
-
         const response = await fetch(
             `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m&timezone=America%2FSao_Paulo&forecast_from=${horaAtual}&forecast_hours=1`
         );
@@ -34,6 +33,8 @@ async function getPrevisao() {
             document.getElementById('resposta2').innerHTML += ` ${temperaturaAtual}ºC`;
         } else {
             document.getElementById('resposta2').innerHTML += `<div>Não há dados de temperatura disponíveis.</div>`;
+            alert('coloque ponto no lugar de virgula')
+            
         }
     } catch (error) {
         alert(error.message);
