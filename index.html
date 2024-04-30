@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav>
+    <div class="container">
+        <div>
+            <h1>DncWeather</h1>
+        </div>
+        <div id="list">
+            <ul>
+                <li>Endereços</li>
+                <li>Previsão do tempo</li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div id="cont">
+    <div class="texto">
+        <h1>Descubra Mais com Precisão: <br> Previsões do Tempo e endereços <br>   em tempo real</h1>
+        <img src="imagem1.svg" alt="erro">
+    </div>
+  </div>
+  <div class="form">
+<div>
+<label for="nome">Primeiro nome:</label> <br>
+<input class="inp" type="text" placeholder="Insira seu primeiro nome:" name="" id="nome">
+    </div>
+    <div>
+<label for="email">Email:</label> <br>
+<input type="text" class="inp"  placeholder="Insira seu e-mail" name="" id="email">
+    </div>
+    <div>
+<label for="cep">Digite o CEP:</label> <br>
+<input type="text" class="inp" required  placeholder="Insira o CEP" name="" id="cep">
+    </div>
+    <div>
+<label for="lat">Digite a latitude e longitude para saber a previsão:</label> <br>
+<input type="text" class="tempo" required placeholder="Latitude" name="" id="lat">
+<input type="text" class="tempo"  required placeholder="Longitude" name="" id="lon">
+    </div>
+    <div id="button">
+    <a href="#texto"><button onclick="getAddressByCep() , getPrevisao()">Acessar</button></a>
+    </div>
+  </div>
+
+    <div class="escondida" id="texto">
+        <h1>Resultado da busca por CEP:</h1> 
+        <img src="imagem2.svg" alt="erro">
+    </div>
+    <div class="escondida" id="resultado">
+        <div id="flex">
+            <h2>Logradouro/nome</h2>
+            <h2>Bairro/Distrito</h2>
+            <h2>Localidade/UF</h2>
+        </div>
+        <div class="escondida" id="resposta">
+        <h2 id="rua"></h2>
+        <h2 id="bairro"></h2>
+        <h2 id="cidade"></h2>
+        </div>
+    </div>
+
+    <div id="texto2">
+        <h1>Previsão do tempo na região:</h1>
+        <img id="nuvem" src="imagem3.svg" alt="">
+    </div>
+    <div id="resposta2">
+        Previsão de tempo de acordo com a região:
+    </div>
+    <div id="rodapé">Termos de Uso | Política de Privacidade</div>
+
+    <script src="apis.js"></script>
+    <script src="show.js"></script>
+    <script src="show2.js"></script>
+</body>
+</html>
