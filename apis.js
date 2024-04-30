@@ -12,7 +12,7 @@ async function getAddressByCep(){
        bairro.innerHTML = data.bairro;
        cidade.innerHTML = data.localidade;
     } catch (error) {
-        alert(erro.massege);
+        alert('CEP não encontrado');
     }
 }
 async function getPrevisao() {
