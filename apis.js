@@ -12,7 +12,7 @@ async function getAddressByCep(){
        bairro.innerHTML = data.bairro;
        cidade.innerHTML = data.localidade;
     } catch (error) {
-        alert('CEP não encontrado');
+        alert('CEP não encontrado ou não digitado');
     }
 }
 async function getPrevisao() {
@@ -33,10 +33,12 @@ async function getPrevisao() {
             document.getElementById('resposta2').innerHTML += ` ${temperaturaAtual}ºC`;
         } else {
             document.getElementById('resposta2').innerHTML += `<div>Não há dados de temperatura disponíveis.</div>`;
-            alert('coloque ponto no lugar de virgula')
+            alert('campo não preenchido corretamente ou coloque ponto no lugar de virgula')
+            
             
         }
     } catch (error) {
+        alert('Campo de preenchimento vazio');
         alert(error.message);
     }
 }
